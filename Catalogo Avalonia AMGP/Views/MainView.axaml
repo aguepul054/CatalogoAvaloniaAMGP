@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        MinHeight="623"
+        MinWidth="999"
+        MaxHeight="623"
+        MaxWidth="999"
+        x:Class="Catalogo_Avalonia_AMGP.Views.MainView"
+        Title="Catalogo_Avalonia_AMGP">
+    <Window.Background>
+        <ImageBrush Source="../Resources/backgroundAvalonia.jpg" Stretch="Uniform"/>
+    </Window.Background>
+    <StackPanel Orientation="Horizontal">
+        <Image Source="../Resources/titulo1.png" Width="200" Height="100" Margin="203,75,0,0" VerticalAlignment="Top"/>
+        <Image Source="../Resources/titulo3.png" Width="200" Height="75" Margin="0,65,0,0" VerticalAlignment="Top"/>
+        <Image Source="../Resources/titulo2.png" Width="150" Height="100" Margin="0,75,0,0" VerticalAlignment="Top"/>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom">
+            <Button Content="Agregar" FontFamily="{DynamicResource JapanDaisuki}" Margin="0,0,0,20" FontSize="20">
+               
+            </Button>
+            <Button Content="Borrar" FontFamily="{DynamicResource JapanDaisuki}" Margin="0,0,0,100" FontSize="20"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

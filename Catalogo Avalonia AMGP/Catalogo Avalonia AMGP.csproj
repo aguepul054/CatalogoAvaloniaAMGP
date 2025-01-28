@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="11.2.1"/>
+        <PackageReference Include="Avalonia.Desktop" Version="11.2.1"/>
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.1"/>
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.1"/>
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Include="Avalonia.Diagnostics" Version="11.2.1">
+            <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+            <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Views\MainView.axaml.cs">
+        <DependentUpon>MainWindow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\backgroundPantallaPrincipal.jpg" />
+      <AvaloniaResource Include="Resources\backgroundPantallaPrincipal.jpg" />
+      <None Remove="Resources\titulo1.png" />
+      <AvaloniaResource Include="Resources\titulo1.png" />
+      <None Remove="Resources\titulo2.png" />
+      <AvaloniaResource Include="Resources\titulo2.png" />
+      <None Remove="Resources\titulo3.png" />
+      <AvaloniaResource Include="Resources\titulo3.png" />
+      <AvaloniaResource Include="Resources\backgroundAvalonia.jpg" />
+      <None Remove="Resources\backgroundAvalonia.jpg" />
+      <AvaloniaResource Include="Resources\backgroundAvalonia.jpg" />
+      <None Remove="Resources\Font\JapanDaisuki.otf" />
+      <AvaloniaResource Include="Resources\Font\JapanDaisuki.otf" />
+    </ItemGroup>
+</Project>
