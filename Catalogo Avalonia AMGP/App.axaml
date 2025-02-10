@@ -2,35 +2,134 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Catalogo_Avalonia_AMGP.App"
              RequestedThemeVariant="Default">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
+    <!-- Definición de los estilos de la aplicación -->
     <Application.Styles>
+        <!-- Aplicar el tema Fluent en toda la aplicación -->
+        <FluentTheme/>
+        
+        <!-- Estilo para el botón -->
         <Style Selector="Button">
-            <Setter Property="Width" Value="100"/>
-            <Setter Property="Height" Value="50"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="Background" Value="Green"/>
+            <Setter Property="Width" Value="100"/> <!-- Ancho del botón -->
+            <Setter Property="Foreground" Value="Black"/> <!-- Color del texto -->
+            <Setter Property="Height" Value="50"/> <!-- Alto del botón -->
+            <Setter Property="VerticalContentAlignment" Value="Center"/> <!-- Alineación vertical del contenido -->
+            <Setter Property="HorizontalContentAlignment" Value="Center"/> <!-- Alineación horizontal del contenido -->
+            <Setter Property="Background">
+                <!-- Definir un degradado de fondo para el botón -->
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0%,50%" EndPoint="100%,50%">
+                        <GradientStops>
+                            <GradientStop Color=" #f31444 " Offset="0.3"/> <!-- Color rojo -->
+                            <GradientStop Color=" #379c93 " Offset="0.6"/> <!-- Color verde -->
+                        </GradientStops>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="Red"/> <!-- Color del borde -->
+            <Setter Property="BorderThickness" Value="3"/> <!-- Grosor del borde -->
+            <Setter Property="CornerRadius" Value="5"/> <!-- Esquinas redondeadas -->
+        </Style>
+        
+        <!-- Estilo para el estado "hover" (pasar el ratón sobre el botón) -->
+        <Style Selector="Button:pointerover /template/ ContentPresenter">
+            <Setter Property="Background">
+                <!-- Definir el degradado para el estado de hover -->
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0%,50%" EndPoint="100%,50%">
+                        <GradientStops>
+                            <GradientStop Color="#379c93" Offset="0.3"/> <!-- Color verde -->
+                            <GradientStop Color=" #f31444 " Offset="0.6"/> <!-- Color rojo -->
+                        </GradientStops>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
             <Setter Property="BorderBrush" Value="Red"/>
             <Setter Property="BorderThickness" Value="3"/>
             <Setter Property="CornerRadius" Value="5"/>
         </Style>
-        <Style Selector="Button:pointerover">
+
+        <!-- Estilo para el estado "pressed" (botón presionado) -->
+        <Style Selector="Button:pressed /template/ ContentPresenter">
+            <Setter Property="Foreground" Value="Black"/> <!-- Color del texto al presionar -->
             <Setter Property="Background">
+                <!-- Definir el degradado para el estado presionado -->
                 <Setter.Value>
-                        <LinearGradientBrush StartPoint="0%,50%" EndPoint="100%,50%">
-                            <GradientStops>
-                                <GradientStop Color="#FF6B6B" Offset="0.0"/>
-                                <GradientStop Color="#FF8E53" Offset="0.3"/>
-                                <GradientStop Color="#FF5E3A" Offset="0.6"/>
-                                <GradientStop Color="#4ECDC4" Offset="1.0"/>
-                            </GradientStops>
-                        </LinearGradientBrush>
+                    <LinearGradientBrush StartPoint="0%,50%" EndPoint="100%,50%">
+                        <GradientStops>
+                            <GradientStop Color=" #631a1b" Offset="0.0"/> <!-- Color oscuro -->
+                            <GradientStop Color="#379c93" Offset="0.3"/> <!-- Color verde -->
+                            <GradientStop Color=" #2e6844" Offset="0.6"/> <!-- Color verde oscuro -->
+                            <GradientStop Color=" #d33438" Offset="1.0"/> <!-- Color rojo intenso -->
+                        </GradientStops>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="Red"/>
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="CornerRadius" Value="5"/>
+        </Style>
+
+        <!-- Estilo para los ComboBox -->
+        <Style Selector="ComboBox /template/ Border#Background">
+            <Setter Property="Background" Value="White"/> <!-- Fondo blanco para los bordes del ComboBox -->
+        </Style>
+
+        <Style Selector="ComboBox:pointerover">
+            <Setter Property="Background" Value="White"/> <!-- Fondo blanco cuando el mouse pasa sobre el ComboBox -->
+        </Style>
+
+        <!-- Estilo para los TextBox -->
+        <Style Selector="TextBox">
+            <Setter Property="Background">
+                <!-- Fondo con un degradado en el TextBox -->
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0%,50%" EndPoint="100%,50%" Opacity="40">
+                        <GradientStops>
+                            <GradientStop Color=" #f31444 " Offset="0.3"/> <!-- Color rojo -->
+                            <GradientStop Color=" #379c93 " Offset="0.6"/> <!-- Color verde -->
+                        </GradientStops>
+                    </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <!-- Estilo para ComboBox con un fondo degradado -->
+        <Style Selector="ComboBox">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0%,50%" EndPoint="100%,50%" Opacity="40">
+                        <GradientStops>
+                            <GradientStop Color=" #f31444 " Offset="0.3"/> <!-- Color rojo -->
+                            <GradientStop Color=" #379c93 " Offset="0.6"/> <!-- Color verde -->
+                        </GradientStops>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Estilo de error para ComboBox (cuando hay un error de validación) -->
+        <Style Selector="ComboBox:error /template/ Border#Background">
+            <Setter Property="BorderBrush" Value="Red"/> <!-- Borde rojo en caso de error -->
+        </Style>
+
+        <!-- Estilo para los elementos del ComboBox -->
+        <Style Selector="ComboBoxItem">
+            <Setter Property="Foreground" Value="Black"/> <!-- Color del texto de los elementos del ComboBox -->
+        </Style>
     </Application.Styles>
+
+    <!-- Definición de recursos globales para la aplicación -->
     <Application.Resources>
+        <!-- Definir la fuente personalizada "JapanDaisuki" -->
         <FontFamily x:Key="JapanDaisuki">avares://Catalogo Avalonia AMGP/Resources/Font/JapanDaisuki.otf#Japan Daisuki</FontFamily>
+
+        <!-- Definir un recurso de fondo con un degradado para TextBox -->
+        <LinearGradientBrush x:Key="ForegroundTextBox" StartPoint="0%,50%" EndPoint="100%,50%" Opacity="60">
+            <GradientStops>
+                <GradientStop Color="#379c93" Offset="0.4"/> <!-- Color verde -->
+                <GradientStop Color="#f31444" Offset="0.6"/> <!-- Color rojo -->
+            </GradientStops>
+        </LinearGradientBrush>
     </Application.Resources>
 </Application>

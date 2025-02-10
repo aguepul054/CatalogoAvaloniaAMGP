@@ -22,7 +22,13 @@ C:\Users\Antonio\.nuget\packages\avalonia.themes.simple\11.2.1\lib\net8.0\Avalon
 C:\Users\Antonio\.nuget\packages\avalonia\11.2.1\ref\net8.0\Avalonia.Vulkan.dll
 C:\Users\Antonio\.nuget\packages\avalonia.win32\11.2.1\lib\net8.0\Avalonia.Win32.dll
 C:\Users\Antonio\.nuget\packages\avalonia.x11\11.2.1\lib\net8.0\Avalonia.X11.dll
+C:\Users\Antonio\.nuget\packages\communitytoolkit.mvvm\8.4.0\lib\net8.0\CommunityToolkit.Mvvm.dll
 C:\Users\Antonio\.nuget\packages\harfbuzzsharp\7.3.0.2\lib\net6.0\HarfBuzzSharp.dll
+C:\Users\Antonio\.nuget\packages\material.avalonia\3.9.1\lib\net8.0\Material.Avalonia.dll
+C:\Users\Antonio\.nuget\packages\material.avalonia\3.9.1\lib\net8.0\Material.Colors.dll
+C:\Users\Antonio\.nuget\packages\material.icons\2.2.0\lib\netstandard2.0\Material.Icons.dll
+C:\Users\Antonio\.nuget\packages\material.avalonia\3.9.1\lib\net8.0\Material.Ripple.dll
+C:\Users\Antonio\.nuget\packages\material.avalonia\3.9.1\lib\net8.0\Material.Styles.dll
 C:\Users\Antonio\.nuget\packages\microcom.runtime\0.11.0\lib\net5.0\MicroCom.Runtime.dll
 C:\Users\Antonio\.nuget\packages\microsoft.netcore.app.ref\8.0.12\ref\net8.0\Microsoft.CSharp.dll
 C:\Users\Antonio\.nuget\packages\microsoft.netcore.app.ref\8.0.12\ref\net8.0\Microsoft.VisualBasic.Core.dll
@@ -31,6 +37,7 @@ C:\Users\Antonio\.nuget\packages\microsoft.netcore.app.ref\8.0.12\ref\net8.0\Mic
 C:\Users\Antonio\.nuget\packages\microsoft.netcore.app.ref\8.0.12\ref\net8.0\Microsoft.Win32.Registry.dll
 C:\Users\Antonio\.nuget\packages\microsoft.netcore.app.ref\8.0.12\ref\net8.0\mscorlib.dll
 C:\Users\Antonio\.nuget\packages\microsoft.netcore.app.ref\8.0.12\ref\net8.0\netstandard.dll
+C:\Users\Antonio\.nuget\packages\semi.avalonia\11.2.1.4\lib\net8.0\Semi.Avalonia.dll
 C:\Users\Antonio\.nuget\packages\skiasharp\2.88.8\lib\net6.0\SkiaSharp.dll
 C:\Users\Antonio\.nuget\packages\microsoft.netcore.app.ref\8.0.12\ref\net8.0\System.AppContext.dll
 C:\Users\Antonio\.nuget\packages\microsoft.netcore.app.ref\8.0.12\ref\net8.0\System.Buffers.dll

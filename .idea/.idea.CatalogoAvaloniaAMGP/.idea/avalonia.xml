@@ -5,6 +5,7 @@
       <map>
         <entry key="Catalogo Avalonia AMGP/App.axaml" value="Catalogo Avalonia AMGP/Catalogo Avalonia AMGP.csproj" />
         <entry key="Catalogo Avalonia AMGP/MainWindow.axaml" value="Catalogo Avalonia AMGP/Catalogo Avalonia AMGP.csproj" />
+        <entry key="Catalogo Avalonia AMGP/UserControls/TextBox.axaml" value="Catalogo Avalonia AMGP/Catalogo Avalonia AMGP.csproj" />
         <entry key="Catalogo Avalonia AMGP/Views/MainView.axaml" value="Catalogo Avalonia AMGP/Catalogo Avalonia AMGP.csproj" />
       </map>
     </option>

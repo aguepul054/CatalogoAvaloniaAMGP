@@ -64,6 +64,22 @@
             "Avalonia.Themes.Fluent": {
               "target": "Package",
               "version": "[11.2.1, )"
+            },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "Material.Avalonia": {
+              "target": "Package",
+              "version": "[3.9.1, )"
+            },
+            "Material.Icons": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Semi.Avalonia": {
+              "target": "Package",
+              "version": "[11.2.1.4, )"
             }
           },
           "imports": [

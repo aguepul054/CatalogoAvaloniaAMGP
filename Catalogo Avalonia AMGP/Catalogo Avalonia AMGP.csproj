@@ -2,22 +2,27 @@
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
         <TargetFramework>net8.0</TargetFramework>
-        <Nullable>enable</Nullable>
+        <Nullable>enable</Nullable>    
+	<EnableSourceGenerators>true</EnableSourceGenerators>
         <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
         <ApplicationManifest>app.manifest</ApplicationManifest>
         <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="11.2.1"/>
-        <PackageReference Include="Avalonia.Desktop" Version="11.2.1"/>
-        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.1"/>
-        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.1"/>
+        <PackageReference Include="Avalonia" Version="11.2.1" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.2.1" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.1" />
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.1" />
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
         <PackageReference Include="Avalonia.Diagnostics" Version="11.2.1">
             <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
             <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
         </PackageReference>
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+        <PackageReference Include="Material.Avalonia" Version="3.9.1" />
+        <PackageReference Include="Material.Icons" Version="2.2.0" />
+        <PackageReference Include="Semi.Avalonia" Version="11.2.1.4" />
     </ItemGroup>
 
     <ItemGroup>
@@ -29,8 +34,10 @@
 
     <ItemGroup>
       <None Remove="Resources\backgroundPantallaPrincipal.jpg" />
-      <AvaloniaResource Include="Resources\backgroundPantallaPrincipal.jpg" />
       <None Remove="Resources\titulo1.png" />
+      <None Include="Resources\Images\defaultImage.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
       <AvaloniaResource Include="Resources\titulo1.png" />
       <None Remove="Resources\titulo2.png" />
       <AvaloniaResource Include="Resources\titulo2.png" />
@@ -41,5 +48,33 @@
       <AvaloniaResource Include="Resources\backgroundAvalonia.jpg" />
       <None Remove="Resources\Font\JapanDaisuki.otf" />
       <AvaloniaResource Include="Resources\Font\JapanDaisuki.otf" />
+      <None Remove="Resources\flecha_izquierda.png" />
+      <AvaloniaResource Include="Resources\flecha_izquierda.png" />
+      <None Remove="Resources\flecha_derecha.png" />
+      <AvaloniaResource Include="Resources\flecha_derecha.png" />
+      <None Remove="Resources\backgroundImagen.png" />
+      <AvaloniaResource Include="Resources\backgroundImagen.png" />
+      <None Remove="Resources\backgroundImagenMenu.png" />
+      <AvaloniaResource Include="Resources\backgroundImagenMenu.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Resources\pantallaAgregar.png" />
+      <AvaloniaResource Include="Resources\pantallaAgregar.png" />
+      <None Update="Resources\Images\1.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Resources\Images\2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Resources\Images\3.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Resources\Images\4.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <UpToDateCheckInput Remove="UserControls\TextBox.axaml" />
     </ItemGroup>
 </Project>

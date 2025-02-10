@@ -1,3 +1,7 @@
+C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Resources\Images\1.jpg
+C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Resources\Images\2.jpg
+C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Resources\Images\3.jpg
+C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Resources\Images\4.jpg
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Catalogo Avalonia AMGP.exe
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Catalogo Avalonia AMGP.deps.json
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Catalogo Avalonia AMGP.runtimeconfig.json
@@ -27,8 +31,15 @@ C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Avalonia.Themes.Simple.dll
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Avalonia.Win32.dll
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Avalonia.X11.dll
+C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\CommunityToolkit.Mvvm.dll
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\HarfBuzzSharp.dll
+C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Material.Avalonia.dll
+C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Material.Colors.dll
+C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Material.Ripple.dll
+C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Material.Styles.dll
+C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Material.Icons.dll
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\MicroCom.Runtime.dll
+C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Semi.Avalonia.dll
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\SkiaSharp.dll
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\System.IO.Pipelines.dll
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Tmds.DBus.Protocol.dll
@@ -59,9 +70,11 @@ C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\obj
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\obj\Debug\net8.0\Catalogo Avalonia AMGP.AssemblyInfoInputs.cache
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\obj\Debug\net8.0\Catalogo Avalonia AMGP.AssemblyInfo.cs
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\obj\Debug\net8.0\Catalogo Avalonia AMGP.csproj.CoreCompileInputs.cache
+C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\obj\Debug\net8.0\Catalogo Avalonia AMGP.sourcelink.json
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\obj\Debug\net8.0\Avalonia\Catalogo Avalonia AMGP.dll
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\obj\Debug\net8.0\Avalonia\Catalogo Avalonia AMGP.pdb
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\obj\Debug\net8.0\refint\Avalonia\Catalogo Avalonia AMGP.dll
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\obj\Debug\net8.0\Catalogo.CEF4D626.Up2Date
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\obj\Debug\net8.0\Catalogo Avalonia AMGP.genruntimeconfig.cache
 C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\obj\Debug\net8.0\ref\Catalogo Avalonia AMGP.dll
+C:\Users\Antonio\RiderProjects\Catalogo Avalonia AMGP\Catalogo Avalonia AMGP\bin\Debug\net8.0\Resources\Images\defaultImage.png

@@ -2,25 +2,138 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Catalogo_Avalonia_AMGP.ViewModel"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         MinHeight="623"
         MinWidth="999"
         MaxHeight="623"
         MaxWidth="999"
         x:Class="Catalogo_Avalonia_AMGP.Views.MainView"
+        x:DataType="vm:MainViewModel"
         Title="Catalogo_Avalonia_AMGP">
+
+    <!-- Fondo de la ventana (imagen de fondo) -->
     <Window.Background>
         <ImageBrush Source="../Resources/backgroundAvalonia.jpg" Stretch="Uniform"/>
     </Window.Background>
-    <StackPanel Orientation="Horizontal">
-        <Image Source="../Resources/titulo1.png" Width="200" Height="100" Margin="203,75,0,0" VerticalAlignment="Top"/>
-        <Image Source="../Resources/titulo3.png" Width="200" Height="75" Margin="0,65,0,0" VerticalAlignment="Top"/>
-        <Image Source="../Resources/titulo2.png" Width="150" Height="100" Margin="0,75,0,0" VerticalAlignment="Top"/>
-        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom">
-            <Button Content="Agregar" FontFamily="{DynamicResource JapanDaisuki}" Margin="0,0,0,20" FontSize="20">
-               
-            </Button>
-            <Button Content="Borrar" FontFamily="{DynamicResource JapanDaisuki}" Margin="0,0,0,100" FontSize="20"/>
+    
+    <!-- Panel Principal (Pantalla principal del catálogo) -->
+    <StackPanel>
+        <!-- Panel con visibilidad controlada por el binding a PantallaPrincipal -->
+        <StackPanel IsVisible="{Binding PantallaPrincipal}">
+        
+            <!-- Sección con imágenes en la parte superior -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                <Image Source="../Resources/titulo1.png" Width="200" Height="100" Margin="203,45,0,0"/>
+                <Image Source="../Resources/titulo3.png" Width="200" Height="75" Margin="0,19,0,0"/>
+                <Image Source="../Resources/titulo2.png" Width="150" Height="100" Margin="0,50,0,0"/>
+            </StackPanel>
+            
+            <!-- Sección central con la imagen principal y detalles -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Image Source="{Binding Imagen}" Stretch="Uniform" Height="250" Width="300"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Background="{DynamicResource ForegroundTextBox}" Margin="10,0,0,0">
+                    
+                    <!-- Título del elemento mostrado -->
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <TextBlock Foreground="White" FontStyle="Italic" Text="Título:" FontFamily="{DynamicResource JapanDaisuki}" FontSize="25" Margin="0,10,10,0"/>
+                        <TextBlock Foreground="WhiteSmoke" FontFamily="{DynamicResource JapanDaisuki}" FontSize="25" Margin="0,10,0,0" Text="{Binding Tbtitulo}"/>
+                    </StackPanel>
+                    
+                    <!-- Tipo del elemento (TV o Película) -->
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <TextBlock Foreground="WhiteSmoke" FontStyle="Italic" Text="Tipo:" FontFamily="{DynamicResource JapanDaisuki}" FontSize="25" Margin="0,10,25,0"/>
+                        <TextBlock Foreground="WhiteSmoke" FontFamily="{DynamicResource JapanDaisuki}" FontSize="25" Margin="0,10,0,0" Text="{Binding Tbtipo}"/>
+                    </StackPanel>
+                    
+                    <!-- Estado del elemento (En emisión o Finalizado) -->
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <TextBlock Foreground="WhiteSmoke" FontStyle="Italic" Text="Estado:" FontFamily="{DynamicResource JapanDaisuki}" FontSize="25" Margin="0,10,25,0"/>
+                        <TextBlock Foreground="WhiteSmoke" FontFamily="{DynamicResource JapanDaisuki}" FontSize="25" Margin="0,10,0,0" Text="{Binding Tbestado}"/>
+                    </StackPanel>
+                    
+                    <!-- Género del elemento -->
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="WhiteSmoke" FontStyle="Italic" Text="Género:" FontFamily="{DynamicResource JapanDaisuki}" FontSize="25" Margin="0,10,25,0"/>
+                        <TextBlock Foreground="WhiteSmoke" FontFamily="{DynamicResource JapanDaisuki}" FontSize="25" Margin="0,10,0,0" Text="{Binding Tbgenero}"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        
+            <!-- Sección inferior con botones de navegación y acciones -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                
+                <!-- Botones de navegación (anterior y siguiente) -->
+                <StackPanel Orientation="Horizontal">
+                    <Button Margin="0,0,15,0" BorderBrush="Red" Command="{Binding MostrarAnteriorCommand}" IsEnabled="{Binding BotonAtrasEnabled}">
+                        <Image Source="../Resources/flecha_izquierda.png"/>
+                    </Button>
+                    <Button Margin="0,0,208,0" Command="{Binding MostrarSiguienteCommand}" IsEnabled="{Binding BotonSiguienteEnabled}">
+                        <Image Source="../Resources/flecha_derecha.png"/>
+                    </Button>
+                </StackPanel>
+                
+                <!-- Botones para añadir y borrar elementos -->
+                <StackPanel>
+                    <Button Content="Añadir" FontFamily="{DynamicResource JapanDaisuki}" Margin="0,0,80,10" FontSize="20" Command="{Binding AnadirCommand}"/>
+                    <Button Content="Borrar" FontFamily="{DynamicResource JapanDaisuki}" Margin="0,0,80,100" FontSize="20" Command="{Binding BorrarCommand}"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Panel para Añadir un nuevo elemento (Pantalla de añadir) -->
+        <StackPanel IsVisible="{Binding PantallaAnadir}">
+            
+            <!-- Sección con imágenes en la parte superior (igual que la principal) -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                <Image Source="../Resources/titulo1.png" Width="200" Height="100" Margin="203,45,0,0"/>
+                <Image Source="../Resources/titulo3.png" Width="200" Height="75" Margin="0,19,0,0"/>
+                <Image Source="../Resources/titulo2.png" Width="150" Height="100" Margin="0,50,0,0"/>
+            </StackPanel>
+            
+            <!-- Sección central para añadir datos -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="{Binding Imagen}" Stretch="Uniform" Height="250" Width="300"/>
+                    <Button Content="Añadir Imagen" FontFamily="{DynamicResource JapanDaisuki}" Width="180" Height="40" Command="{Binding AnadirImagenCommand}" Margin="60,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    
+                    <!-- Campos para introducir datos del nuevo elemento -->
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
+                        <TextBlock Foreground="White" FontStyle="Italic" Text="Título:" FontFamily="{DynamicResource JapanDaisuki}" FontSize="25" Margin="0,10,10,0"/>
+                        <TextBox Width="200" Text="{Binding Tbntitulo}" Height="30" BorderBrush="{Binding ColorBordeTitulo}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
+                        <TextBlock Foreground="White" FontStyle="Italic" Text="Tipo:" FontFamily="{DynamicResource JapanDaisuki}" FontSize="25" Margin="0,10,10,0"/>
+                        <ComboBox SelectedValue="{Binding Tbtipo}" Width="170" Height="30" Margin="0,10,0,0" Foreground="White" PlaceholderText="Seleccione Tipo...">
+                            <ComboBoxItem Background="White">TV</ComboBoxItem>
+                            <ComboBoxItem Background="White">Película</ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
+                        <TextBlock Foreground="White" FontStyle="Italic" Text="Estado:" FontFamily="{DynamicResource JapanDaisuki}" FontSize="25" Margin="0,10,10,0"/>
+                        <ComboBox SelectedValue="{Binding Tbestado}" Width="170" Height="30" Margin="0,10,0,0" Foreground="White" PlaceholderText="Seleccione estado...">
+                            <ComboBoxItem Background="White">En emisión</ComboBoxItem>
+                            <ComboBoxItem Background="White">Finalizado</ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
+                        <TextBlock Foreground="White" FontStyle="Italic" Text="Género:" FontFamily="{DynamicResource JapanDaisuki}" FontSize="25" Margin="0,10,25,0"/>
+                        <TextBox Width="150" Height="30" Margin="0,10,0,0" Text="{Binding Tbngenero}" BorderBrush="{Binding ColorBordeGenero}" Foreground="White"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Botones para confirmar o cancelar la adición -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                <StackPanel>
+                    <Button Content="Confirmar" Width="125" Command="{Binding ConfirmarCommand}" FontFamily="{DynamicResource JapanDaisuki}" Margin="0,0,80,10" FontSize="20"/>
+                    <Button Content="Cancelar" Width="125" Command="{Binding CancelarCommand}" FontFamily="{DynamicResource JapanDaisuki}" Margin="0,0,80,100" FontSize="20"/>
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
     </StackPanel>
 </Window>
