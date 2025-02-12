@@ -270,8 +270,8 @@ public partial class MainViewModel : ObservableObject
         // Crear el nuevo objeto Anime y añadirlo a la lista
         Anime a = new Anime(Tbntitulo, tipo, Estado(estado), Tbngenero, imagenBytes);
         AnadirAnime(a);
-        ColorBordeTitulo = "Transparent"; // Resetear los colores de borde
-        ColorBordeGenero = "Transparent";
+        ColorBordeTitulo = "White"; // Resetear los colores de borde
+        ColorBordeGenero = "White";
         PantallaPrincipal = true; // Volver a la pantalla principal
         PantallaAnadir = false;
         MostrarPrimero(); // Mostrar el primer anime

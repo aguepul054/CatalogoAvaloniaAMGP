@@ -4,18 +4,18 @@ using Avalonia.Controls.Chrome;
 
 namespace Catalogo_Avalonia_AMGP.Models;
 
-// Definición de la clase Anime, representando un anime con varios atributos.
+// Definición de la clase Anime, representando un anime con varios atributos
 [Serializable] // Atributo que indica que la clase puede ser serializada (convertida en un formato que se pueda guardar o transmitir)
 public class Anime
 {
-    // Campos privados para los atributos de la clase.
+    // Campos privados para los atributos de la clase
     private string _title;
     private string _tipo;
     private bool _isAired; // Indica si el anime ya se ha emitido (true/false)
     private string _genero;
     private byte[] _image; // Imagen representada como un arreglo de bytes
 
-    // Propiedades públicas que permiten acceder y modificar los atributos privados.
+    // Propiedades públicas que permiten acceder y modificar los atributos privados
     public string Title { get { return _title; } set { _title = value; } } // Propiedad para el título del anime
     public string Tipo { get { return _tipo; } set { _tipo = value; } } // Propiedad para el tipo del anime (Ej. "TV", "Película")
     public bool IsAired { get { return _isAired; } set { _isAired = value; } } // Propiedad para saber si el anime se ha emitido
@@ -47,5 +47,4 @@ public class Anime
         }
         return false;
     }
-
 }

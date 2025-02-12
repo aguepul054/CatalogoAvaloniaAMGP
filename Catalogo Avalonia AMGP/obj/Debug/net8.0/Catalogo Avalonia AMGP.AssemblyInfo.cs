@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Catalogo Avalonia AMGP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c22e9aeb13236e0903396055c877edfcdf2ae50")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f9b7c985839d9bec88ed486b46ae64da5328d3a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Catalogo Avalonia AMGP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Catalogo Avalonia AMGP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
